@@ -20,4 +20,7 @@ from mainsite import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('<int:tvno>/', views.index, name='tv-url'),
 ]
+# 從 mysite import views
+# 加入 path, 讓首頁指向 views.index
